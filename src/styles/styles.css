@@ -1,0 +1,31 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css");
+
+.add-prompt-response {
+  background-color: inherit;
+  border: none;
+  float: left;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  margin-left: 150px;
+}
+
+.msg-column {
+  margin: 1%;
+  width: 20%;
+}
+
+.pair-top {
+  border-bottom: 1px solid green;
+}
+
+.spacer {
+  margin: 20px;
+}
+
+.user-column {
+  margin: 1%;
+  width: 98%;
+}

@@ -1,0 +1,77 @@
+.company-logo {
+  height: 150px;
+}
+
+.box: {
+  display: block;
+}
+
+.listGroup {
+  margin-right: 225px;
+}
+
+.users-header {
+  font-size: 50px;
+}
+
+.users-container {
+  width: 450px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #71B8CD;
+  display: inline;
+  float: left;
+}
+
+.user-names {
+  float: left;
+  display: block;
+  background-color: #71B8CD;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.user-container-paired {
+  width: 220px;
+  text-align: left;
+  padding-top: 13px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  vertical-align: center;
+  border: none;
+  color: white;
+}
+
+.user-container-unpaired {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 13px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  color: white;
+  background-color: #71B8CD;
+}
+
+.user-bottom {
+  border-top: 1px solid white;
+}
+
+.pairInfo {
+  float: left;
+  text-align: left;
+  padding-top: 13px;
+  padding-left: 15px;
+  color: white;
+  background-color: #71B8CD;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.count-text: {
+  color: #eff;
+}
+
+.delete-pair: {
+  font-size: 12px;
+  align-items: left;
+}

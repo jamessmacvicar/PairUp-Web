@@ -1,0 +1,47 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css");
+
+text {
+  color: #555;
+}
+
+.prompt-response {
+  border: 1px solid gray;
+  height: 25px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.prompt-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-input-container {
+  width: 50%;
+}
+
+.prompt-header {
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.prompt-input {
+  font-size: 1em;
+  height: 150px;
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #fcfcfc;
+  font-size: 16px;
+  resize: none;
+}
+
+.prompt-submit {
+  display: block;
+  float: right;
+}

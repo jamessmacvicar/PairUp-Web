@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+p {
+  color: #555;
+}
+
+h1, h2, h3 {
+  color: #71B8CD;
+}
+
+.bolded {
+  font-weight: bold;
+}
+
+.App-header {
+  background-color: #71B8CD;
+  height: 100px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 0px 0px 150px 150px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.logo {
+  height: 65px;
+}
+
+.tabs {
+}
+
+li {
+  margin: 0px 10px;
+  padding: 5px 10px;
+  border: none;
+}
+
+.active {
+  border: 1px solid #ddd;
+  border-radius: 10px 10px 0px 0px;
+}
+
+#tabs-tab-1,
+#tabs-tab-2,
+#tabs-tab-3,
+#tabs-tab-4,
+#tabs-tab-5 {
+  color: #555;
+}
+
+#tabs-tab-1:hover,
+#tabs-tab-2:hover,
+#tabs-tab-3:hover,
+#tabs-tab-4:hover,
+#tabs-tab-5:hover {
+  color: #71B8CD;
+  text-decoration: none;
+}
+
+#tabs-tab-1:focus,
+#tabs-tab-2:focus,
+#tabs-tab-3:focus,
+#tabs-tab-4:focus,
+#tabs-tab-5:focus {
+  color: black;
+  border: 0px solid white;
+  text-decoration: none;
+}
+
+
+
+.button {
+  font-size: 1em;
+  padding: 8px;
+  margin-top: 5px;
+  color: #555;
+  border-color: #555;
+  border-radius: 5px;
+}
+
+.button:hover,
+.button:focus {
+    color: green;
+    border-color: green;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 250px;
+    padding: 12px 20px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.dropdown {
+  margin: 5px 8px;
+}
