@@ -2,7 +2,7 @@ import * as types from './actionTypes'
 import fb from '../config/initializeFirebase'
 var db = fb.database()
 
-export function sendPrompt (prompt, promptResponses) {
+export function sendPrompt (prompt, promptResponses, organization) {
   return async function (dispatch) {
     try {
       dispatch({type: types.SEND_PROMPT_ATTEMPT})
@@ -29,7 +29,7 @@ export function sendPrompt (prompt, promptResponses) {
       var allThreadsRef = db.ref('/threads')
       let allThreads = (await allThreadsRef.once('value')).val()
       for (var thread_id in allThreads) {
-        if (allThreads[thread_id].isReflection === true) {
+        if (allThreads[thread_id].organization === organization) {
           var newThreadMsgKey = db.ref('/messages').push().key
           updates['/messages/' + thread_id + '/' + newThreadMsgKey] = newPromptMessage
         }
