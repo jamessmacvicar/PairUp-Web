@@ -9,7 +9,8 @@ class NewUser extends Component {
       emailAddress: '',
       firstName: '',
       lastName: '',
-      reflectionType: 'solo',
+      reflectionType: 'paired',
+      userOrganization: 'Pair Up',
     }
 
     this._handleChange = this._handleChange.bind(this)
@@ -26,13 +27,14 @@ class NewUser extends Component {
   _handleSubmit(e) {
     e.preventDefault()
     this.setState({displayMessages: true})
-    this.props.createUser(this.state.firstName, this.state.lastName, this.state.emailAddress, this.state.reflectionType)
+    this.props.createUser(this.state.firstName, this.state.lastName, this.state.emailAddress, this.state.reflectionType, this.state.userOrganization)
     this.setState({
       displayMessages: true,
       emailAddress: '',
       firstName: '',
       lastName: '',
-      reflectionType: 'solo',
+      reflectionType: 'paired',
+      userOrganization: 'Pair Up',
     })
   }
 
@@ -60,6 +62,22 @@ class NewUser extends Component {
             <select value={this.state.reflectionType} name='reflectionType' onChange={this._handleChange} className="dropdown">
               <option name='reflectionType' value='solo'>Solo</option>
               <option name='reflectionType' value='paired'>Paired</option>
+            </select>
+          </div>
+            
+          <div>
+            Organization:
+            <select value={this.state.userOrganization} name='userOrganization' onChange={this._handleChange} className="dropdown">
+              <option name='userOrganization' value='Pair Up'>Pair Up</option>
+              <option name='userOrganization' value='Brave Initiatives'>Brave Initiatives</option>
+              <option name='userOrganization' value='Brave Camp Immokalee 2019'>Brave Camp Immokalee 2019</option>
+              <option name='userOrganization' value='Brave Camp Chicago June 2019'>Brave Camp Chicago June 2019</option>
+              <option name='userOrganization' value='Brave Camp Chicago August 2019'>Brave Camp Chicago August 2019</option>
+              <option name='userOrganization' value='Brave Camp Jakarta 2019'>Brave Camp Jakarta 2019</option>
+              <option name='userOrganization' value='Brave Camp Indianapolis 2019'>Brave Camp Indianapolis 2019</option>
+              <option name='userOrganization' value='Brave Camp Denver 2019'>Brave Camp Denver 2019</option>
+              <option name='userOrganization' value='Brave Camp Santa Fe 2019'>Brave Camp Santa Fe 2019</option>
+              <option name='userOrganization' value='Brave Camp Lancaster 2019'>Brave Camp Lancaster 2019</option>
             </select>
           </div>
           <input type='submit' value='Submit'  className='button'/>
