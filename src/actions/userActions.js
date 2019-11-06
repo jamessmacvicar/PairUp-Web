@@ -16,7 +16,7 @@ export function fetchUsers () {
   }
 }
 
-export function createUser (firstName, lastName, emailAddress, reflectionType) {
+export function createUser (firstName, lastName, emailAddress, reflectionType, organization) {
   return async function (dispatch) {
     try {
       dispatch({ type: types.CREATE_USER_ATTEMPT })
@@ -33,6 +33,7 @@ export function createUser (firstName, lastName, emailAddress, reflectionType) {
         threads: {},
         isPaired: false,
         showWelcome: true,
+        organization: organization,
       }
       if (reflectionType === 'solo') {
         var threadKey = db.ref('threads').push().key
@@ -62,7 +63,7 @@ export function createPair (user1, user2, reflectionType) {
       var updates = {}
       let user1Obj = (await db.ref('/users/' + user1).once('value')).val()
       let user2Obj = (await db.ref('/users/' + user2).once('value')).val()
-
+      let organization = user1Obj.organization
       var user1Info = Object.assign({}, user1Obj, {
         isPaired: true,
         pairId: user2
@@ -76,7 +77,8 @@ export function createPair (user1, user2, reflectionType) {
       var threadInfo = {
         type: '',
         isReflection: null,
-        users: {}
+        users: {},
+        organization: organization
       }
 
       threadInfo.users[user1] = user1Obj.displayName
